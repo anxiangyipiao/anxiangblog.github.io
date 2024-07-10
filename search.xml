@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>gcc,gdb,gprof使用</title>
+      <link href="/anxiangblog.github.io/2024/07/10/gcc/"/>
+      <url>/anxiangblog.github.io/2024/07/10/gcc/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/anxiangblog.github.io/assets/css/APlayer.min.css"><script src="/anxiangblog.github.io/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/anxiangblog.github.io/assets/js/Meting.min.js"></script><p>gcc, gdb, 和 gprof 是GNU工具链中的三个重要工具，分别用于编译、调试和性能分析C&#x2F;C++程序。下面我将详细介绍这三个工具及其基本用法：</p><ol><li>GCC (GNU Compiler Collection)<br>GCC是一个广泛使用的开源编译器集合，主要用来编译C和C++代码，但同时也支持其他语言如Fortran、Ada、Go等。GCC能够将源代码转换成可执行文件，通常的使用步骤包括预处理、编译、汇编和链接四个阶段。</li></ol><p>gcc -o output_file source_file.c</p><p>这里，source_file.c是你的C源代码文件，output_file是生成的可执行文件名。你可以添加各种选项来控制编译行为，比如：</p><p>-Wall 或 -Wextra 添加警告信息，帮助发现潜在的错误。<br>-g 添加调试信息，便于使用gdb进行调试。<br>-O0, -O1, -O2, -O3 控制优化级别，其中-O3提供了最高的优化等级</p><p>GDB (GNU Debugger)<br>GDB是一个强大的源级调试器，用于调试用C&#x2F;C++等语言编写的程序。它允许你查看和修改程序的内部状态，设置断点，单步执行，检查和修改变量值等。</p><p>基本使用：<br>gdb .&#x2F;output_file<br>在GDB中，你可以使用各种命令，例如：</p><p>break 设置断点。<br>run 运行程序直到遇到断点或程序结束。<br>next 执行下一行代码，但不进入函数调用。<br>step 执行下一行代码，如果遇到函数调用则进入函数内部。<br>print 打印变量的值。<br>continue 继续执行直到下一个断点或程序结束</p><p>quit 退出GDB</p><p>GPROF (GNU Program Profiler)<br>GPROF是GNU工具链中的性能分析工具，用于测量程序中各个函数的使用时间。<br>基本使用：<br>gprof -b .&#x2F;output_file gmon.out &gt; profile.out<br>这个命令将输出一个profile.out文件，其中包含了程序中各个函数的执行时间。 </p><p>参数<br>-b</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 专业 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>c++</title>
       <link href="/anxiangblog.github.io/2024/07/09/cpu%E7%9C%BC%E4%B8%AD%E7%9A%84c++/"/>
       <url>/anxiangblog.github.io/2024/07/09/cpu%E7%9C%BC%E4%B8%AD%E7%9A%84c++/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/anxiangblog.github.io/assets/css/APlayer.min.css"><script src="/anxiangblog.github.io/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/anxiangblog.github.io/assets/js/Meting.min.js"></script><p>cpu眼中的变量</p><p>cpu眼中的变量就是内存地址<br>在计算机科学中，CPU（中央处理器）眼中的变量是指内存地址。当我们在程序中声明一个变量时，实际上是在内存中为该变量分配了一块空间，而这块空间的地址就是CPU眼中的变量。CPU通过这个地址来读取或修改这块内存中的数据。例如，如果我们在C++中声明一个整型变量int a &#x3D; 10;，那么在内存中就会有一块空间被分配给a，并存储值10，而a的内存地址就是CPU眼中的a。</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/anxiangblog.github.io/assets/css/APlayer.min.css"><script src="/anxiangblog.github.io/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/anxiangblog.github.io/assets/js/Meting.min.js"></script><p>cpu眼中的变量</p><p>cpu眼中的变量就是内存地址<br>在计算机科学中，CPU（中央处理器）眼中的变量是指内存地址。当我们在程序中声明一个变量时，实际上是在内存中为该变量分配了一块空间，而这块空间的地址就是CPU眼中的变量。CPU通过这个地址来读取或修改这块内存中的数据。例如，如果我们在C++中声明一个整型变量int a &#x3D; 10;，那么在内存中就会有一块空间被分配给a，并存储值10，而a的内存地址就是CPU眼中的a。</p><p>内存分页</p><p>每一个进程都有一个自己的页表，页表记录了进程的虚拟地址空间到物理地址空间的映射关系。</p><p>模板</p><p>模板是C++中一种非常重要的语法，它允许我们定义一个通用类型，并使用该类型来创建不同类型的变量。例如，我们可以定义一个模板类MyClass，然后使用该模板</p>]]></content>
       
       
       <categories>
